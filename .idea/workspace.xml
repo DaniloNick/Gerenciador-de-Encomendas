@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="792b188c-5114-4c75-ac05-e0ab51a49ce1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sistema Portaria.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/BuscaEncomenda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Correspondencia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Encomenda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Pacote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/RegistraEntrega.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Correspondencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Correspondencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Encomenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Encomenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Pacote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Pacote.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

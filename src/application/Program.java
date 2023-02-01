@@ -1,6 +1,8 @@
 package application;
 
+import entities.Correspondencia;
 import entities.Encomenda;
+import entities.Pacote;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,6 +16,7 @@ public class Program {
         Scanner sc = new Scanner(System.in);
 
         int menu = 0;
+        char chresp;
 
         do {
             System.out.println("");
@@ -23,37 +26,45 @@ public class Program {
 
             menu = sc.nextInt();
 
+
             switch (menu) {
                 case 1:
-                    System.out.println("**Cadastro de Encomenda**");
-                    System.out.print("Bloco:");
-                    Integer bloco = sc.nextInt();
+                    do {
+                        System.out.println("**Cadastro de Encomenda**");
+                        System.out.print("Bloco:");
+                        Integer bloco = sc.nextInt();
 
-                    System.out.print("Apartamento:");
-                    Integer apto = sc.nextInt();
+                        System.out.print("Apartamento:");
+                        Integer apto = sc.nextInt();
 
-                    sc.nextLine();
-                    System.out.print("Nome do Destinatario:");
-                    String destinatario = sc.nextLine();
+                        sc.nextLine();
+                        System.out.print("Nome do Destinatario:");
+                        String destinatario = sc.nextLine();
 
-                    Date dataCadastro = new Date();
+                        Date dataEntrada = new Date();
 
-                    System.out.print("Encomenda é pacote ou carta ? (P/C)");
-                    char chPacote = sc.next().charAt(0);
+                        System.out.print("Encomenda é pacote ou carta ? (P/C)");
+                        char chPacote = sc.next().charAt(0);
 
-                    System.out.print("Existe alguma observacao ?");
-                    sc.nextLine();
-                    String observacao = sc.nextLine();
+                        System.out.print("Existe alguma observacao ?");
+                        sc.nextLine();
+                        String observacao = sc.nextLine();
 
-                    Encomenda encomenda = new Encomenda(bloco, apto,destinatario,dataCadastro,observacao);
-                    System.out.println(encomenda);
-
-
-
-
-                    System.out.println();
-
-
+                        if (chPacote == 'p') {
+                            System.out.println("Digite rastreio do pacote: ");
+                            String rastreio = sc.next();
+                            System.out.println("Qual tamanho do pacote ? (P/M/G)");
+                            char chtamanho = sc.next().charAt(0);
+                            System.out.println(new Pacote(bloco, apto, destinatario, dataEntrada, observacao, rastreio, chtamanho));
+                        } else {
+                            System.out.print("Quantas Cartas ?");
+                            Integer quantidade = sc.nextInt();
+                            System.out.println(new Correspondencia(bloco, apto, destinatario, dataEntrada, observacao, quantidade));
+                        }
+                        System.out.println("Existe mais alguma encomenda para cadastrar? (S/N)");
+                        chresp = sc.next().charAt(0);
+                    }while (chresp=='s');
+                    
                     break;
 
                 case 2:

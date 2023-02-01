@@ -4,8 +4,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Encomenda {
+
 
     private Integer bloco;
     private Integer apto;
@@ -14,6 +16,7 @@ public class Encomenda {
     private String observacao;
 
     private List<Encomenda> list = new ArrayList<>();
+    Scanner sc = new Scanner(System.in);
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
 
     public Encomenda() {
@@ -63,12 +66,11 @@ public class Encomenda {
         this.observacao = observacao;
     }
 
-
     public String toString() {
         StringBuilder sbEncomenda = new StringBuilder();
         sbEncomenda.append("\n");
         sbEncomenda.append("Encomenda cadastrada com sucesso: \n");
-        sbEncomenda.append("Bloco: " + getBloco() + " Apto: " + getApto());
+        sbEncomenda.append("Bloco: " + getBloco() + " Apto: " + getApto()+"\n");
         sbEncomenda.append("Destinatário: " + getDestinatario() + "\n");
         sbEncomenda.append("Data de Entrada: " + sdf.format(dataEntrada) + "\n");
         sbEncomenda.append("Observacao: " + getObservacao() + "\n");

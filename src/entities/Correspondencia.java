@@ -2,7 +2,7 @@ package entities;
 
 import java.util.Date;
 
-public class Correspondencia extends Encomenda{
+public class Correspondencia extends Encomenda {
     private Integer quantidade;
 
     public Correspondencia() {
@@ -20,8 +20,19 @@ public class Correspondencia extends Encomenda{
     public Correspondencia(Integer bloco, Integer apto, String destinatario, Date dataEntrada, String observacao, Integer quantidade) {
         super(bloco, apto, destinatario, dataEntrada, observacao);
         this.quantidade = quantidade;
+    }
 
-
+    @Override
+    public String toString() {
+        StringBuilder sbEncomenda = new StringBuilder();
+        sbEncomenda.append("\n");
+        sbEncomenda.append("Correspondencia cadastrada com sucesso: \n");
+        sbEncomenda.append("Bloco: " + getBloco() + " Apto: " + getApto() + "\n");
+        sbEncomenda.append("Destinatário: " + getDestinatario() + "\n");
+        sbEncomenda.append("Data de Entrada: " + sdf.format(getDataEntrada()) + "\n");
+        sbEncomenda.append("Quantidade de Cartas: " + getQuantidade() + "\n");
+        sbEncomenda.append("Observacao: " + getObservacao() + "\n");
+        return sbEncomenda.toString();
     }
 }
 

@@ -1,10 +1,13 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Pacote extends Encomenda {
     private String rastreio;
     private char tamanho;
+
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
 
     public Pacote() {
         super();
@@ -30,5 +33,18 @@ public class Pacote extends Encomenda {
 
     public void setTamanho(char tamanho) {
         this.tamanho = tamanho;
+    }
+    @Override
+    public String toString() {
+        StringBuilder sbEncomenda = new StringBuilder();
+        sbEncomenda.append("\n");
+        sbEncomenda.append("Pacote cadastrado com sucesso: \n");
+        sbEncomenda.append("Bloco: " + getBloco() + " Apto: " + getApto()+"\n");
+        sbEncomenda.append("Destinatário: " + getDestinatario() + "\n");
+        sbEncomenda.append("Data de Entrada: " + sdf.format(getDataEntrada()) + "\n");
+        sbEncomenda.append("Cod. rastreio: " + getRastreio()+"\n");
+        sbEncomenda.append("Tamanho do Pacote: " + getTamanho()+"\n");
+        sbEncomenda.append("Observacao: " + getObservacao() + "\n");
+        return sbEncomenda.toString();
     }
 }
