@@ -1,12 +1,18 @@
 package entities;
-
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Correspondencia extends Encomenda {
     private Integer quantidade;
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
 
     public Correspondencia() {
         super();
+    }
+
+    public Correspondencia(Integer bloco, Integer apto, String destinatario, Date dataEntrada, String observacao,Integer quantidade) {
+        super(bloco, apto, destinatario, dataEntrada, observacao);
+        this.quantidade = quantidade;
     }
 
     public Integer getQuantidade() {
@@ -14,11 +20,6 @@ public class Correspondencia extends Encomenda {
     }
 
     public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public Correspondencia(Integer bloco, Integer apto, String destinatario, Date dataEntrada, String observacao, Integer quantidade) {
-        super(bloco, apto, destinatario, dataEntrada, observacao);
         this.quantidade = quantidade;
     }
 

@@ -1,12 +1,9 @@
 package application;
 
 import entities.Correspondencia;
-import entities.Encomenda;
 import entities.Pacote;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class Program {
@@ -15,7 +12,7 @@ public class Program {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
         Scanner sc = new Scanner(System.in);
 
-        int menu = 0;
+        int menu;
         char chresp;
 
         do {
@@ -31,6 +28,8 @@ public class Program {
                 case 1:
                     do {
                         System.out.println("**Cadastro de Encomenda**");
+                        System.out.println();
+
                         System.out.print("Bloco:");
                         Integer bloco = sc.nextInt();
 
@@ -43,7 +42,7 @@ public class Program {
 
                         Date dataEntrada = new Date();
 
-                        System.out.print("Encomenda é pacote ou carta ? (P/C)");
+                        System.out.print("Encomenda é [P]acote ou [C]arta ?");
                         char chPacote = sc.next().charAt(0);
 
                         System.out.print("Existe alguma observacao ?");
@@ -51,20 +50,23 @@ public class Program {
                         String observacao = sc.nextLine();
 
                         if (chPacote == 'p') {
+
                             System.out.println("Digite rastreio do pacote: ");
-                            String rastreio = sc.next();
-                            System.out.println("Qual tamanho do pacote ? (P/M/G)");
-                            char chtamanho = sc.next().charAt(0);
-                            System.out.println(new Pacote(bloco, apto, destinatario, dataEntrada, observacao, rastreio, chtamanho));
+                            String rastreioNF = sc.next();
+
+                            System.out.println(new Pacote(bloco, apto, destinatario, dataEntrada, observacao, rastreioNF));
                         } else {
+
                             System.out.print("Quantas Cartas ?");
                             Integer quantidade = sc.nextInt();
+
                             System.out.println(new Correspondencia(bloco, apto, destinatario, dataEntrada, observacao, quantidade));
                         }
-                        System.out.println("Existe mais alguma encomenda para cadastrar? (S/N)");
+                        System.out.println("Existe mais alguma encomenda para cadastrar? [S/N]");
                         chresp = sc.next().charAt(0);
+
                     }while (chresp=='s');
-                    
+
                     break;
 
                 case 2:
@@ -74,7 +76,7 @@ public class Program {
                     break;
 
                 case 4:
-                    if (menu >= 3 || menu < 0) {
+                    if (menu >= 3) {
                         System.out.println("Digite uma opcao valida!");
                     }
                     break;

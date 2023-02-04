@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Sistema Portaria.jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="792b188c-5114-4c75-ac05-e0ab51a49ce1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Sistema_Portaria_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Sistema_Portaria_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Correspondencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Correspondencia.java" afterDir="false" />
@@ -22,6 +28,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

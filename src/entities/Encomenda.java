@@ -1,27 +1,17 @@
 package entities;
-
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
 
 public class Encomenda {
-
-
     private Integer bloco;
     private Integer apto;
     private String destinatario;
     private Date dataEntrada;
     private String observacao;
 
-    private List<Encomenda> list = new ArrayList<>();
-    Scanner sc = new Scanner(System.in);
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
-
     public Encomenda() {
     }
-
     public Encomenda(Integer bloco, Integer apto, String destinatario, Date dataEntrada, String observacao) {
         this.bloco = bloco;
         this.apto = apto;
@@ -77,3 +67,6 @@ public class Encomenda {
         return sbEncomenda.toString();
     }
 }
+
+
+
