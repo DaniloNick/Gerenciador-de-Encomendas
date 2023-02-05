@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="792b188c-5114-4c75-ac05-e0ab51a49ce1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Sistema_Portaria_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Sistema_Portaria_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Correspondencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Correspondencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Encomenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Encomenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Encomenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Volume.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Pacote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Pacote.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

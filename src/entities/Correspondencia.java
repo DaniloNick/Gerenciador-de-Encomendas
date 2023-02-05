@@ -2,7 +2,7 @@ package entities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Correspondencia extends Encomenda {
+public class Correspondencia extends Volume {
     private Integer quantidade;
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
 

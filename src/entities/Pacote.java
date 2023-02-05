@@ -2,7 +2,7 @@ package entities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Pacote extends Encomenda {
+public class Pacote extends Volume {
     private String rastreioNf;
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
 
