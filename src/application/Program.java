@@ -1,42 +1,45 @@
 package application;
-import entities.Volume;
 
-import java.util.ArrayList;
-import java.util.List;
+import entities.Encomenda;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
 
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Encomenda encomenda = new Encomenda();
+        Encomenda obj = new Encomenda();
 
+        Scanner scMenu = new Scanner(System.in);
         Scanner sc = new Scanner(System.in);
-        List<Volume> list = new ArrayList<>();
+
         int menu;
 
         do {
             System.out.println("");
             System.out.println("Gerenciamento de Volumes");
-            System.out.println("1- Cadastrar volume 2- Buscar itens");
-            System.out.println("3- Registrar Entrega 0- Sair");
-            menu = sc.nextInt();
+            System.out.println("\n1- Cadastrar volume \n2- Buscar itens \n3- Registrar Entrega \n4-Relatorios \n0- Sair");
+            menu = scMenu.nextInt();
 
 
             switch (menu) {
                 case 1:
-                    Volume volume = new Volume();
-                    volume.cadastro();
+                    encomenda.adicionarVolume();
                     break;
 
                 case 2:
+
                     break;
 
                 case 3:
                     break;
 
                 case 4:
-                    if (menu >= 3) {
-                        System.out.println("Digite uma opcao valida!");
-                    }
+                    encomenda.exibirLista();
                     break;
 
                 default:
@@ -44,9 +47,10 @@ public class Program {
                     break;
 
             }
-        }while (menu != 0) ;
+        }
+        while (menu != 0);
 
-        sc.close();
+        scMenu.close();
     }
 }
 
