@@ -2,9 +2,7 @@ package application;
 
 import entities.Encomenda;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Program {
@@ -28,7 +26,7 @@ public class Program {
 
             switch (menu) {
                 case 1:
-                    encomenda.adicionarVolume();
+                    encomenda.cadastraVolume();
                     break;
 
                 case 2:

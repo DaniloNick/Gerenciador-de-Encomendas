@@ -42,7 +42,7 @@ public class Encomenda {
         return encomendas;
     }
 
-    public void adicionarVolume() {
+    public void cadastraVolume() {
 
         Scanner scVolume = new Scanner(System.in);
         Boolean continuar = true;
@@ -67,11 +67,14 @@ public class Encomenda {
             char chPacote = scVolume.next().charAt(0);
 
             if (chPacote == 'p') {
-                System.out.println("Digite rastreio/NF do volume: ");
-                String rastreioNF = scVolume.next().toUpperCase();
-
-                Encomenda encomenda = new Pacote(bloco, apto, destinatario, dataEntrada, rastreioNF);
-                encomendas.add(encomenda);
+                System.out.println("Quantos pacotes esse morador recebeu?");
+                int n = scVolume.nextInt();
+                for (int i =0; i<n; i++) {
+                    System.out.println("Digite rastreio/NF do volume: ");
+                    String rastreioNF = scVolume.next().toUpperCase();
+                    Encomenda encomenda = new Pacote(bloco, apto, destinatario, dataEntrada, rastreioNF);
+                    encomendas.add(encomenda);
+                }
                 System.out.println("Cadastrado com sucesso.");
             } else {
                 System.out.print("Quantas Cartas ?");
@@ -93,22 +96,18 @@ public class Encomenda {
     public void exibirLista() {
         System.out.println("\nExibindo todas as encomendas: ");
         for (Encomenda encomenda : encomendas) {
-            System.out.println(encomenda.toString());
+            System.out.println(encomenda.exibiVolumesCadastrados());
         }
     }
 
-    @Override
-    public String toString() {
+
+    public String exibiVolumesCadastrados() {
         return "\nBloco/Apto: "
                 + getBloco()
                 + "/"
                 + getApto()
                 + "\nDestinatario: "
                 + getDestinatario() + "\nData: " + getDataEntrada();
-    }
-
-    public void buscarPorData(Date dataProcurada) {
-
     }
 }
 
