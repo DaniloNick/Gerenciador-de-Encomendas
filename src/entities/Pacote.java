@@ -1,8 +1,10 @@
 package entities;
 
+import services.Recursos;
+
 import java.util.Scanner;
 
-public class Pacote extends Encomenda {
+public class Pacote extends Encomenda implements Recursos {
 
     private String rastreioNf;
 
@@ -19,7 +21,6 @@ public class Pacote extends Encomenda {
         return rastreioNf;
     }
 
-    @Override
     public void cadastrarEncomenda() {
 
         Scanner sc = new Scanner(System.in);
@@ -64,12 +65,10 @@ public class Pacote extends Encomenda {
         }
     }
 
-    @Override
     public void buscarEncomenda() {
 
     }
 
-    @Override
     public void entregarEncomenda() {
 
         Scanner sc = new Scanner(System.in);
@@ -100,7 +99,6 @@ public class Pacote extends Encomenda {
         }
     }
 
-    @Override
     public void relatorio() {
 
     }

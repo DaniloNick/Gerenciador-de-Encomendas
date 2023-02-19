@@ -1,6 +1,7 @@
 package application;
 
 import entities.Cartoes;
+import entities.Morador;
 import entities.Pacote;
 
 import java.util.Scanner;
@@ -10,6 +11,7 @@ public class Program {
 
         Scanner scMenu = new Scanner(System.in);
         Scanner sc = new Scanner(System.in);
+
         Pacote objPacote = new Pacote();
         Cartoes objCartao = new Cartoes();
 
@@ -26,20 +28,24 @@ public class Program {
                 case 1:
                     System.out.println("Cadastrar Pacote ou Cartao? \n[P].Pacote \n[C].Cartao");
                     char resp = sc.next().charAt(0);
-                    if(resp == 'p'){
+                    if (resp == 'p') {
                         objPacote.cadastrarEncomenda();
-                    }else{
+                    } else if (resp == 'c') {
                         objCartao.cadastrarEncomenda();
+                    } else {
+                        System.out.println("opcao invalida!");
                     }
                     break;
 
                 case 2:
-                   System.out.println("Buscar Pacote ou Cartao? \n[P].Pacote \n[C].Cartao");
+                    System.out.println("Buscar Pacote ou Cartao? \n[P].Pacote \n[C].Cartao");
                     resp = sc.next().charAt(0);
-                    if(resp == 'p'){
+                    if (resp == 'p') {
                         objPacote.buscarEncomenda();
-                    }else{
+                    } else if (resp == 'c') {
                         objCartao.buscarEncomenda();
+                    } else {
+                        System.out.println("opcao invalida!");
                     }
 
                     break;
@@ -47,20 +53,24 @@ public class Program {
                 case 3:
                     System.out.println("Entregar Pacote ou Cartao? \n[P].Pacote \n[C].Cartao");
                     resp = sc.next().charAt(0);
-                    if(resp == 'p'){
+                    if (resp == 'p') {
                         objPacote.entregarEncomenda();
-                    }else {
+                    } else if (resp == 'c') {
                         objCartao.entregarEncomenda();
+                    } else {
+                        System.out.println("opcao invalida!");
                     }
                     break;
 
                 case 4:
                     System.out.println("Gerar qual relatorio ? \n[P].Pacotes \n[C].Cartoes");
                     resp = sc.next().charAt(0);
-                    if(resp == 'p'){
+                    if (resp == 'p') {
                         objPacote.relatorio();
-                    }else {
+                    } else if (resp == 'c') {
                         objCartao.relatorio();
+                    } else {
+                        System.out.println("opcao invalida!");
                     }
                     break;
 

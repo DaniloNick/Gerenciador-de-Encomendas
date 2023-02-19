@@ -40,13 +40,6 @@ public abstract class Encomenda {
         return morador;
     }
 
-    public abstract void cadastrarEncomenda();
-
-    public abstract void buscarEncomenda();
-
-    public abstract void entregarEncomenda();
-
-    public abstract void relatorio();
 }
 
 

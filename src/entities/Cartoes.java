@@ -1,8 +1,10 @@
 package entities;
 
+import services.Recursos;
+
 import java.util.Scanner;
 
-public class Cartoes extends Encomenda {
+public class Cartoes extends Encomenda implements Recursos {
 
     public Cartoes() {
     }
@@ -11,7 +13,6 @@ public class Cartoes extends Encomenda {
         super(rgEntregador, nomeEntregador, quantidade, morador);
     }
 
-    @Override
     public void cadastrarEncomenda() {
 
         Scanner scVolume = new Scanner(System.in);
@@ -44,49 +45,23 @@ public class Cartoes extends Encomenda {
 
             System.out.println("\nCadastrado com sucesso.");
 
-        System.out.println("\nExiste mais algum cartao para cadastrar? [S/N]");
-        String Respota = scVolume.next();
-        if (Respota.equals("n")) {
-            break;
+            System.out.println("\nExiste mais algum cartao para cadastrar? [S/N]");
+            String Respota = scVolume.next();
+            if (Respota.equals("n")) {
+                break;
+            }
         }
+
     }
 
-}
-    @Override
     public void buscarEncomenda() {
 
     }
-    @Override
+
     public void entregarEncomenda() {
 
-        Scanner sc = new Scanner(System.in);
-        Encomenda encomendaEncontrada = null;
-
-        System.out.print("Digite o numero do Bloco:");
-        Integer bloco = sc.nextInt();
-        System.out.print("Digite o numero do Apartamento:");
-        Integer apto = sc.nextInt();
-
-        for (Encomenda encomenda : encomendas) {
-            if (encomenda.morador().getBloco().equals(bloco) && encomenda.morador().getApto().equals(apto) && encomenda.getQuantidade() != null) {
-                encomendaEncontrada = encomenda;
-            }
-            break;
-        }
-        if (encomendaEncontrada != null) {
-            System.out.println("\nCartao encontrado para " + encomendaEncontrada.morador().getDestinatario()
-                    + "\nBloco: " + encomendaEncontrada.morador().getBloco() + " Apto: " + encomendaEncontrada.morador().getApto());
-            System.out.println("\nEntregar pacote ? \n[S].SIM \n[N].Nao");
-            char resp = sc.next().charAt(0);
-            if (resp == 's') {
-                encomendas.remove(encomendaEncontrada);
-                System.out.println("Cartao Entregue!");
-            }
-        } else {
-            System.out.println("**Nenhum Cartao encontrado**");
-        }
     }
-    @Override
+
     public void relatorio() {
 
     }
