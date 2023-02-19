@@ -2,15 +2,20 @@ package entities;
 
 import services.Recursos;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Cartoes extends Encomenda implements Recursos {
 
+    private Integer quantidade;
+
     public Cartoes() {
+        super();
     }
 
-    public Cartoes(Integer rgEntregador, String nomeEntregador, Integer quantidade, Morador morador) {
-        super(rgEntregador, nomeEntregador, quantidade, morador);
+    public Cartoes(Entregador entregador, Morador morador, LocalDateTime dataEntrada, Integer quantidade) {
+        super(entregador, morador, dataEntrada);
+        this.quantidade = quantidade;
     }
 
     public void cadastrarEncomenda() {
@@ -38,10 +43,12 @@ public class Cartoes extends Encomenda implements Recursos {
             System.out.print("Nome do Destinatario:");
             String destinatario = scVolume.nextLine().toUpperCase();
 
+            LocalDateTime dataEntrada = LocalDateTime.now();
+
             System.out.println("Quantos cartoes esse morador recebeu?");
             int quantidade = scVolume.nextInt();
 
-            encomendas.add(new Cartoes(rgEntregador, nomeEntregador, quantidade, new Morador(bloco, apto, destinatario)));
+            encomendas.add(new Cartoes(new Entregador(rgEntregador, nomeEntregador),new Morador(bloco, apto, destinatario),dataEntrada, quantidade));
 
             System.out.println("\nCadastrado com sucesso.");
 

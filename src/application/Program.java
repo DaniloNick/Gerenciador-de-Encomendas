@@ -1,7 +1,6 @@
 package application;
 
 import entities.Cartoes;
-import entities.Morador;
 import entities.Pacote;
 
 import java.util.Scanner;
@@ -26,49 +25,57 @@ public class Program {
 
             switch (menu) {
                 case 1:
-                    System.out.println("Cadastrar Pacote ou Cartao? \n[P].Pacote \n[C].Cartao");
+                    System.out.println("Cadastrar Pacote ou Cartao? \n[1].Pacote \n[2].Cartao \n[0].Voltar");
                     char resp = sc.next().charAt(0);
-                    if (resp == 'p') {
+                    if (resp == '1') {
                         objPacote.cadastrarEncomenda();
-                    } else if (resp == 'c') {
+                    } else if (resp == '2') {
                         objCartao.cadastrarEncomenda();
+                    }else if (resp == '0') {
+                        break;
                     } else {
                         System.out.println("opcao invalida!");
                     }
                     break;
 
                 case 2:
-                    System.out.println("Buscar Pacote ou Cartao? \n[P].Pacote \n[C].Cartao");
+                    System.out.println("Buscar Pacote ou Cartao? \n[1].Pacote \n[2].Cartao \n[0].Voltar");
                     resp = sc.next().charAt(0);
-                    if (resp == 'p') {
+                    if (resp == '1') {
                         objPacote.buscarEncomenda();
-                    } else if (resp == 'c') {
+                    } else if (resp == '2') {
                         objCartao.buscarEncomenda();
-                    } else {
+                    } else if (resp == '0') {
+                        break;
+                    }else {
                         System.out.println("opcao invalida!");
                     }
 
                     break;
 
                 case 3:
-                    System.out.println("Entregar Pacote ou Cartao? \n[P].Pacote \n[C].Cartao");
+                    System.out.println("Entregar Pacote ou Cartao? \n[1].Pacote \n[2].Cartao \n[0].Voltar");
                     resp = sc.next().charAt(0);
-                    if (resp == 'p') {
+                    if (resp == '1') {
                         objPacote.entregarEncomenda();
-                    } else if (resp == 'c') {
+                    } else if (resp == '2') {
                         objCartao.entregarEncomenda();
-                    } else {
+                    } else if (resp == '0') {
+                        break;
+                    }else {
                         System.out.println("opcao invalida!");
                     }
                     break;
 
                 case 4:
-                    System.out.println("Gerar qual relatorio ? \n[P].Pacotes \n[C].Cartoes");
+                    System.out.println("Gerar qual relatorio ? \n[1].Pacotes \n[2].Cartoes \n[0].Voltar");
                     resp = sc.next().charAt(0);
-                    if (resp == 'p') {
+                    if (resp == '1') {
                         objPacote.relatorio();
-                    } else if (resp == 'c') {
+                    } else if (resp == '2') {
                         objCartao.relatorio();
+                    }else if (resp == '0') {
+                        break;
                     } else {
                         System.out.println("opcao invalida!");
                     }

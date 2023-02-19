@@ -1,17 +1,19 @@
 package entities;
 
+import java.util.Scanner;
+
 public class Morador {
     private Integer bloco;
     private Integer apto;
-    private String destinatario;
+    private String nome;
 
     public Morador() {
     }
 
-    public Morador(Integer bloco, Integer apto, String destinatario) {
+    public Morador(Integer bloco, Integer apto, String nome) {
         this.bloco = bloco;
         this.apto = apto;
-        this.destinatario = destinatario;
+        this.nome = nome;
     }
 
     public Integer getBloco() {
@@ -22,7 +24,7 @@ public class Morador {
         return apto;
     }
 
-    public String getDestinatario() {
-        return destinatario;
+    public String getNome() {
+        return nome;
     }
 }
